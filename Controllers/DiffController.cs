@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace dotnet_diff.Controllers
 {
   [Route("v1/[controller]")]
+
   [ApiController]
   public class DiffController : ControllerBase
   {
@@ -14,7 +15,8 @@ namespace dotnet_diff.Controllers
     [HttpPost("{id}/left")]
     public ActionResult<string> DiffLeft(int id, [FromBody] string value)
     {
-      return "ok";
+
+      return $"Received value: {value}";
     }
 
     // POST v1/diff/{id}/right
